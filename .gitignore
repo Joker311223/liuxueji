@@ -1,0 +1,32 @@
+# 前端
+front/node_modules/
+front/dist/
+front/.env
+front/.env.local
+
+# 后端
+server/target/
+server/.mvn/
+server/mvnw
+server/mvnw.cmd
+server/HELP.md
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 上传文件
+uploads/
+
+# 日志
+*.log
+
+# 配置文件（包含敏感信息）
+**/application-local.yml

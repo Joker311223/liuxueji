@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: ai-knowledge-server
+  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ai_knowledge?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: your_password
+  
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.liuxueji.aiknowledge.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# OpenAI配置
+openai:
+  api-key: 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
+  base-url: https://api.openai.com/v1
+  model: gpt-5-nano
+  timeout: 60
+
+# 文件存储配置
+file:
+  upload-dir: ./uploads
+  max-size: 52428800  # 50MB
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    com.liuxueji.aiknowledge: DEBUG
